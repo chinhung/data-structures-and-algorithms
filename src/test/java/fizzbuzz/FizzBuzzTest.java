@@ -9,9 +9,8 @@ public class FizzBuzzTest {
 
     @Test
     public void testFizzBuzz() {
-        FizzBizz fizzBizz = null;
+        FizzBizz fizzBizz = new FizzBuzzImpl();
 
-        assertEquals("0", fizzBizz.execute(0));
         assertEquals("1", fizzBizz.execute(1));
         assertEquals("2", fizzBizz.execute(2));
         assertEquals("Fizz", fizzBizz.execute(3));

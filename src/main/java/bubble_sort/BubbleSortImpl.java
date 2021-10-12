@@ -16,9 +16,9 @@ public class BubbleSortImpl<Element> implements BubbleSort<Element> {
         }
     }
 
-    private void swap(Element[] elements, int i, int j) {
-        Element temp = elements[i];
-        elements[i] = elements[j];
-        elements[j] = temp;
+    private void swap(Element[] elements, int a, int b) {
+        Element temp = elements[a];
+        elements[a] = elements[b];
+        elements[b] = temp;
     }
 }

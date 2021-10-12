@@ -18,7 +18,7 @@ public class FibonacciTest {
         assertEquals(5L, fibonacci.calculate(5));
         assertEquals(8L, fibonacci.calculate(6));
 
-        assertEquals(1134903170L, fibonacci.calculate(45));
+        assertEquals(267914296L, fibonacci.calculate(42));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class FibonacciTest {
         assertEquals(5L, fibonacci.calculate(5));
         assertEquals(8L, fibonacci.calculate(6));
 
-        assertEquals(1134903170L, fibonacci.calculate(45));
+        assertEquals(267914296L, fibonacci.calculate(42));
     }
 
     @Test
@@ -48,6 +48,6 @@ public class FibonacciTest {
         assertEquals(5L, fibonacci.calculate(5));
         assertEquals(8L, fibonacci.calculate(6));
 
-        assertEquals(1134903170L, fibonacci.calculate(45));
+        assertEquals(267914296L, fibonacci.calculate(42));
     }
 }

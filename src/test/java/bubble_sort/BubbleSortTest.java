@@ -11,7 +11,7 @@ public class BubbleSortTest {
 
     @Test
     public void testSortIntegerArray() {
-        BubbleSort<Integer> bubbleSort = new BubbleSortSortImpl<>();
+        BubbleSort<Integer> bubbleSort = new BubbleSortImpl<>();
         Comparator<Integer> naturalOrder = Comparator.comparingInt((Integer o) -> o);
 
         Integer[] unsorted = TestData.getUnsorted();

@@ -37,7 +37,7 @@ public class FibonacciTest {
     }
 
     @Test
-    public void testCachedFibonacci() {
+    public void testCachedRecursiveFibonacci() {
         Fibonacci fibonacci = new CachedRecursiveFibonacci();
 
         assertEquals(0L, fibonacci.calculate(0));

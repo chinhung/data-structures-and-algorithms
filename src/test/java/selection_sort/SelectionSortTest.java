@@ -20,7 +20,9 @@ public class SelectionSortTest {
         SelectionSort<Integer> selectionSort = new SelectionSortImpl<>();
         Comparator<Integer> naturalOrder = Comparator.comparingInt((Integer o) -> o);
 
-        Integer[] actual = selectionSort.sort(getUnsorted(), naturalOrder);
+        Integer[] unsorted = getUnsorted();
+        selectionSort.sort(unsorted, naturalOrder);
+        Integer[] actual = unsorted;
 
         assertArrayEquals(getSorted(), actual);
     }

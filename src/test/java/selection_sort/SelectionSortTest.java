@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SelectionSortTest {
 
     @Test
-    public void testSelectionSort() {
+    public void testSortIntegerArray() {
         SelectionSort<Integer> selectionSort = new SelectionSortImpl<>();
         Comparator<Integer> naturalOrder = Comparator.comparingInt((Integer o) -> o);
 

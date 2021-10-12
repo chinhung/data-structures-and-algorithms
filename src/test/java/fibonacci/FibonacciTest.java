@@ -8,7 +8,7 @@ public class FibonacciTest {
 
     @Test
     public void testFibonacciCalculate() {
-        Fibonacci fibonacci = null;
+        Fibonacci fibonacci = new ArrayFibonacci();
 
         assertEquals(0L, fibonacci.calculate(0));
         assertEquals(1L, fibonacci.calculate(1));

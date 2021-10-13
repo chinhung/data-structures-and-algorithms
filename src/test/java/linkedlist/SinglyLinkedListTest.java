@@ -37,4 +37,17 @@ public class SinglyLinkedListTest {
         list.insertFirst(10);
         assertEquals(2, list.getSize());
     }
+
+    @Test
+    public void testClear() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        list.clear();
+
+        assertEquals(0, list.getSize());
+        assertNull(list.getFirst());
+        assertNull(list.getLast());
+    }
 }

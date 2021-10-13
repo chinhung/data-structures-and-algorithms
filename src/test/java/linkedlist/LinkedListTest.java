@@ -15,4 +15,16 @@ public class LinkedListTest {
 
         assertEquals(10, list.getFirst().getData());
     }
+
+    @Test
+    public void testSize() {
+        LinkedList<Integer> list = new LinkedListImpl<>();
+        assertEquals(0, list.getSize());
+
+        list.insertFirst(5);
+        assertEquals(1, list.getSize());
+
+        list.insertFirst(10);
+        assertEquals(2, list.getSize());
+    }
 }

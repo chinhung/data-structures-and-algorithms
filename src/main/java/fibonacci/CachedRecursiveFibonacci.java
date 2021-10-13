@@ -9,17 +9,12 @@ public class CachedRecursiveFibonacci implements Fibonacci {
 
     public CachedRecursiveFibonacci() {
         this.cache = new HashMap<>();
+        this.cache.put(0, 0L);
+        this.cache.put(1, 1L);
     }
 
     @Override
     public long calculate(int number) {
-        if (number == 0) {
-            return 0L;
-        }
-        if (number == 1) {
-            return 1L;
-        }
-        
         Long cachedValue = cache.get(number);
         if (cachedValue != null) {
             return cachedValue;

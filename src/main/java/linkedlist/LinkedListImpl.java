@@ -25,6 +25,11 @@ public class LinkedListImpl<Data> implements LinkedList<Data> {
     }
 
     @Override
+    public Node<Data> getLast() {
+        return null;
+    }
+
+    @Override
     public void insertFirst(Data data) {
         NodeImpl<Data> newNode = new NodeImpl<>(data);
         newNode.setNext(this.head);

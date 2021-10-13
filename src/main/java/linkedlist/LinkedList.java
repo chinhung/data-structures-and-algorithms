@@ -1,8 +1,8 @@
 package linkedlist;
 
-public interface LinkedList<Element> {
+public interface LinkedList<Data> {
 
-    Node<Element> getFirst();
+    Node<Data> getFirst();
 
-    void insertFirst(Element element);
+    void insertFirst(Data data);
 }

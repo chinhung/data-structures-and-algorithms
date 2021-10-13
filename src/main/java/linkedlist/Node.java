@@ -1,8 +1,8 @@
 package linkedlist;
 
-public interface Node<Element> {
+public interface Node<Data> {
 
-    Element getData();
+    Data getData();
 
-    Node<Element> getNext();
+    Node<Data> getNext();
 }

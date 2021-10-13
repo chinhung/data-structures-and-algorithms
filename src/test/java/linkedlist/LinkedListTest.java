@@ -8,7 +8,7 @@ public class LinkedListTest {
 
     @Test
     public void testInsertFirstAndGetFirst() {
-        LinkedList<Integer> list = null;
+        LinkedList<Integer> list = new LinkedListImpl<>();
 
         list.insertFirst(5);
         list.insertFirst(10);

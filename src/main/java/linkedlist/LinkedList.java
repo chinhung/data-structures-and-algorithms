@@ -9,4 +9,6 @@ public interface LinkedList<Data> {
     void insertFirst(Data data);
 
     int getSize();
+
+    void clear();
 }

@@ -20,6 +20,11 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
     }
 
     @Override
+    public void clear() {
+        head = null;
+    }
+
+    @Override
     public Node<Data> getFirst() {
         return head;
     }

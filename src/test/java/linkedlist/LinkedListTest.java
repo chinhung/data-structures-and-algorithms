@@ -17,7 +17,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void testSize() {
+    public void testGetSize() {
         LinkedList<Integer> list = new LinkedListImpl<>();
         assertEquals(0, list.getSize());
 

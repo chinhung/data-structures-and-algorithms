@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class LinkedListImpl<Data> implements LinkedList<Data> {
+public class SinglyLinkedList<Data> implements LinkedList<Data> {
 
     private Node<Data> head;
 
@@ -39,7 +39,7 @@ public class LinkedListImpl<Data> implements LinkedList<Data> {
 
     @Override
     public void insertFirst(Data data) {
-        NodeImpl<Data> newNode = new NodeImpl<>(data);
+        SinglyNode<Data> newNode = new SinglyNode<>(data);
         newNode.setNext(this.head);
         this.head = newNode;
     }

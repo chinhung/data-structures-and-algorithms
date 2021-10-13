@@ -1,11 +1,11 @@
 package linkedlist;
 
-public class NodeImpl<Data> implements Node<Data> {
+public class SinglyNode<Data> implements Node<Data> {
 
     private Data data;
     private Node<Data> next;
 
-    NodeImpl(Data data) {
+    SinglyNode(Data data) {
         this.data = data;
     }
 

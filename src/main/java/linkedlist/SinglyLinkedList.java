@@ -25,12 +25,15 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
     }
 
     @Override
-    public Node<Data> getFirst() {
-        return head;
+    public Data getFirst() {
+        if (head == null) {
+            return null;
+        }
+        return head.getData();
     }
 
     @Override
-    public Node<Data> getLast() {
+    public Data getLast() {
         if (head == null) {
             return null;
         }
@@ -39,7 +42,7 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
         while (current.getNext() != null) {
             current = current.getNext();
         }
-        return current;
+        return current.getData();
     }
 
     @Override

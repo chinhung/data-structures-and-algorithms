@@ -2,9 +2,9 @@ package linkedlist;
 
 public interface LinkedList<Data> {
 
-    Node<Data> getFirst();
+    Data getFirst();
 
-    Node<Data> getLast();
+    Data getLast();
 
     void insertFirst(Data data);
 

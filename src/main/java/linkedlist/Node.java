@@ -1,6 +1,6 @@
 package linkedlist;
 
-public interface Node<Data> {
+interface Node<Data> {
 
     Data getData();
 

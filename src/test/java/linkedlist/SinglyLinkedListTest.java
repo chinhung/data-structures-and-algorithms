@@ -13,7 +13,7 @@ public class SinglyLinkedListTest {
         list.insertFirst(5);
         list.insertFirst(10);
 
-        assertEquals(10, list.getFirst().getData());
+        assertEquals(10, list.getFirst());
     }
 
     @Test
@@ -23,7 +23,7 @@ public class SinglyLinkedListTest {
         list.insertFirst(5);
         list.insertFirst(10);
 
-        assertEquals(5, list.getLast().getData());
+        assertEquals(5, list.getLast());
     }
 
     @Test

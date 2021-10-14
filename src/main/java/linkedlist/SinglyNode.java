@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class SinglyNode<Data> implements Node<Data> {
+class SinglyNode<Data> implements Node<Data> {
 
     private Data data;
     private Node<Data> next;

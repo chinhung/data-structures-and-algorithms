@@ -5,6 +5,8 @@
 
 This repository contains practical examples about data structures and algorithms.
 
+![Merge Sort and Binary Search Tree](https://i.imgur.com/vbSJKZp.png)
+
 ## Examples
 
 This repository is developing and will be up-to-date. The following list shows the examples which this repository already has:

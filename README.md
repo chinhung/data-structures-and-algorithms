@@ -9,10 +9,14 @@ This repository is developing and will be up-to-date. The following list shows t
 ### Data Structures
 
 - LinkedList
+  - SinglyLinkedList
 
 ### Algorithms
 
 - Fibonacci
+  - ArrayFibonacci
+  - RecursiveFibonacci
+  - CachedRecursiveFibonacci
 - FizzBuzz
 - Sorting Algorithms
   - Selection Sort

@@ -13,6 +13,7 @@ This repository is developing and will be up-to-date. The following list shows t
 
 ### Algorithms
 
+- Palindrome
 - Fibonacci
   - ArrayFibonacci
   - RecursiveFibonacci
@@ -28,7 +29,6 @@ Examples to be added to this repository are the following:
 - Binary Search Tree
 - Stack
 - Queue
-- Palindrome
 - Reverse String
 - Reverse Integer
 - Factorial

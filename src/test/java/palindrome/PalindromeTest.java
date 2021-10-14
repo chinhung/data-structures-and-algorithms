@@ -8,7 +8,7 @@ public class PalindromeTest {
 
     @Test
     public void testPalindrome() {
-        Palindrome palindrome = new Palindrome();
+        Palindrome palindrome = new PalindromeImpl();
         assertTrue(palindrome.execute("abcba"));
         assertFalse(palindrome.execute("abcde"));
     }

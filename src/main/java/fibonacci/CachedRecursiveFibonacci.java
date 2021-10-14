@@ -7,7 +7,7 @@ public class CachedRecursiveFibonacci implements Fibonacci {
 
     private Map<Integer, Long> cache;
 
-    public CachedRecursiveFibonacci() {
+    CachedRecursiveFibonacci() {
         this.cache = new HashMap<>();
         this.cache.put(0, 0L);
         this.cache.put(1, 1L);
@@ -23,5 +23,9 @@ public class CachedRecursiveFibonacci implements Fibonacci {
         Long calculated = calculate(number - 1) + calculate(number - 2);
         cache.put(number, calculated);
         return calculated;
+    }
+
+    public static Fibonacci factory() {
+        return new ValidateNumberDecorator(new CachedRecursiveFibonacci());
     }
 }

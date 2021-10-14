@@ -2,6 +2,9 @@ package fibonacci;
 
 public class ArrayFibonacci implements Fibonacci {
 
+    ArrayFibonacci() {
+    }
+
     @Override
     public long calculate(int number) {
         if (number == 0) {
@@ -20,5 +23,9 @@ public class ArrayFibonacci implements Fibonacci {
         }
 
         return results[results.length - 1];
+    }
+
+    public static Fibonacci factory() {
+        return new ValidateNumberDecorator(new ArrayFibonacci());
     }
 }

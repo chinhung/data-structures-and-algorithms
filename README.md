@@ -1,5 +1,6 @@
 # Data Structures and Algorithms
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/chinhung/pointwave/blob/master/LICENSE)
 [![Java CI with Gradle](https://github.com/chinhung/data-structures-and-algorithms/actions/workflows/gradle.yml/badge.svg)](https://github.com/chinhung/data-structures-and-algorithms/actions/workflows/gradle.yml)
 
 This repository contains practical examples about data structures and algorithms.

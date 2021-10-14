@@ -31,6 +31,7 @@ Examples to be added to this repository are the following:
 - Palindrome
 - Reverse String
 - Reverse Integer
+- Factorial
 - ...etc.
 
 Stay tuned!

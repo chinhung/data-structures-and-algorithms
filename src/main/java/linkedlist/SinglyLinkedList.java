@@ -34,11 +34,11 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
 
     @Override
     public Data getLast() {
-        if (head == null) {
+        SinglyNode<Data> last = getLastNode();
+        if (last == null) {
             return null;
         }
-
-        return getLastNode().getData();
+        return last.getData();
     }
 
     private SinglyNode<Data> getLastNode() {
@@ -63,12 +63,12 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
     @Override
     public void insertLast(Data data) {
         SinglyNode<Data> newNode = new SinglyNode<>(data);
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-
         SinglyNode<Data> last = getLastNode();
-        last.setNext(newNode);
+
+        if (last == null) {
+            head = newNode;
+        } else {
+            last.setNext(newNode);
+        }
     }
 }

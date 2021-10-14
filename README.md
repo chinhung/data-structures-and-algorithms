@@ -1,5 +1,7 @@
 # Data Structures and Algorithms
 
+[![Java CI with Gradle](https://github.com/chinhung/data-structures-and-algorithms/actions/workflows/gradle.yml/badge.svg)](https://github.com/chinhung/data-structures-and-algorithms/actions/workflows/gradle.yml)
+
 This repository contains practical examples about data structures and algorithms.
 
 ## Examples

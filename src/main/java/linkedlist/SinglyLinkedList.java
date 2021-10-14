@@ -38,11 +38,19 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
             return null;
         }
 
+        return getLastNode().getData();
+    }
+
+    private SinglyNode<Data> getLastNode() {
+        if (head == null) {
+            return null;
+        }
+
         SinglyNode<Data> current = head;
         while (current.getNext() != null) {
             current = current.getNext();
         }
-        return current.getData();
+        return current;
     }
 
     @Override
@@ -50,5 +58,17 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
         SinglyNode<Data> newNode = new SinglyNode<>(data);
         newNode.setNext(this.head);
         this.head = newNode;
+    }
+
+    @Override
+    public void insertLast(Data data) {
+        SinglyNode<Data> newNode = new SinglyNode<>(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        SinglyNode<Data> last = getLastNode();
+        last.setNext(newNode);
     }
 }

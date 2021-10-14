@@ -17,13 +17,13 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    public void testGetLast() {
+    public void testInsertLastAndGetLast() {
         LinkedList<Integer> list = new SinglyLinkedList<>();
 
-        list.insertFirst(5);
-        list.insertFirst(10);
+        list.insertLast(5);
+        list.insertLast(10);
 
-        assertEquals(5, list.getLast());
+        assertEquals(10, list.getLast());
     }
 
     @Test

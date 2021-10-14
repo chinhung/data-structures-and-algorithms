@@ -8,6 +8,8 @@ public interface LinkedList<Data> {
 
     void insertFirst(Data data);
 
+    void insertLast(Data data);
+
     int getSize();
 
     void clear();

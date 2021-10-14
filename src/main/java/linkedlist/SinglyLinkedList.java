@@ -56,8 +56,8 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
     @Override
     public void insertFirst(Data data) {
         SinglyNode<Data> newNode = new SinglyNode<>(data);
-        newNode.setNext(this.head);
-        this.head = newNode;
+        newNode.setNext(head);
+        head = newNode;
     }
 
     @Override

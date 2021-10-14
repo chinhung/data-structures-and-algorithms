@@ -2,7 +2,7 @@ package linkedlist;
 
 public class SinglyLinkedList<Data> implements LinkedList<Data> {
 
-    private Node<Data> head;
+    private SinglyNode<Data> head;
 
     @Override
     public int getSize() {
@@ -10,7 +10,7 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
             return 0;
         }
 
-        Node<Data> current = head;
+        SinglyNode<Data> current = head;
         int size = 1;
         while (current.getNext() != null) {
             current = current.getNext();
@@ -38,7 +38,7 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
             return null;
         }
 
-        Node<Data> current = head;
+        SinglyNode<Data> current = head;
         while (current.getNext() != null) {
             current = current.getNext();
         }

@@ -1,25 +1,23 @@
 package linkedlist;
 
-class SinglyNode<Data> implements Node<Data> {
+class SinglyNode<Data> {
 
     private Data data;
-    private Node<Data> next;
+    private SinglyNode<Data> next;
 
     SinglyNode(Data data) {
         this.data = data;
     }
 
-    void setNext(Node<Data> next) {
-        this.next = next;
-    }
-
-    @Override
-    public Data getData() {
+    Data getData() {
         return data;
     }
 
-    @Override
-    public Node<Data> getNext() {
+    SinglyNode<Data> getNext() {
         return next;
+    }
+
+    void setNext(SinglyNode<Data> next) {
+        this.next = next;
     }
 }

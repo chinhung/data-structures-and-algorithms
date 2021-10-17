@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.function.Consumer;
+
 public class SinglyLinkedList<Data> implements LinkedList<Data> {
 
     private SinglyNode<Data> head;
@@ -185,5 +187,18 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
 
         newNode.setNext(current);
         previous.setNext(newNode);
+    }
+
+    @Override
+    public void forEach(Consumer<Data> consumer) {
+        if (head == null) {
+            return;
+        }
+
+        SinglyNode<Data> current = head;
+        while (current != null) {
+            consumer.accept(current.getData());
+            current = current.getNext();
+        }
     }
 }

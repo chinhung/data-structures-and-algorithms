@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.function.Consumer;
+
 public interface LinkedList<Data> {
 
     Data getFirst();
@@ -23,4 +25,6 @@ public interface LinkedList<Data> {
     Data remove(int index);
 
     void insert(int index, Data data);
+
+    void forEach(Consumer<Data> consumer);
 }

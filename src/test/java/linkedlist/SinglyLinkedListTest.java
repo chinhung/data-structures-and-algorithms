@@ -2,6 +2,9 @@ package linkedlist;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SinglyLinkedListTest {
@@ -185,5 +188,21 @@ public class SinglyLinkedListTest {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             list.remove(2);
         });
+    }
+
+    @Test
+    public void testForEach() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        List<Integer> container = new ArrayList<>();
+        list.forEach((data) -> {
+            container.add(data);
+        });
+
+        assertEquals(2, container.size());
+        assertTrue(container.contains(5));
+        assertTrue(container.contains(10));
     }
 }

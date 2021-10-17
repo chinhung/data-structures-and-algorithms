@@ -123,4 +123,32 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
         }
         return current.getData();
     }
+
+    @Override
+    public Data remove(int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("index must be equal to zero, or larger than zero");
+        }
+        if (head == null) {
+            throw new IndexOutOfBoundsException("this list is empty");
+        }
+
+        SinglyNode<Data> previous = null;
+        SinglyNode<Data> current = head;
+        for (int i = 0; i <= index; i++) {
+            if (i == index) {
+                break;
+            }
+
+            if (current.getNext() == null) {
+                throw new IndexOutOfBoundsException("index is out of bounds, max index is " + (i - 1));
+            }
+
+            previous = current;
+            current = current.getNext();
+        }
+
+        previous.setNext(current.getNext());
+        return current.getData();
+    }
 }

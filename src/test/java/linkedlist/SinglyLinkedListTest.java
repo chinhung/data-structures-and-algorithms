@@ -117,11 +117,13 @@ public class SinglyLinkedListTest {
         LinkedList<Integer> list = new SinglyLinkedList<>();
         list.insertFirst(5);
         list.insertFirst(10);
+        list.insertFirst(15);
 
-        Integer removed = list.remove(0);
+        Integer removed = list.remove(1);
 
         assertEquals(10, removed);
-        assertEquals(5, list.getFirst());
+        assertEquals(15, list.get(0));
+        assertEquals(5, list.get(1));
     }
 
     @Test

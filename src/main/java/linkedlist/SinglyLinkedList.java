@@ -71,4 +71,13 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
             last.setNext(newNode);
         }
     }
+
+    @Override
+    public void removeFirst() {
+        if (head == null) {
+            return;
+        }
+
+        head = head.getNext();
+    }
 }

@@ -60,6 +60,6 @@ public class SinglyLinkedListTest {
         list.removeFirst();
 
         assertEquals(1, list.getSize());
-        assertEquals(10, list.getFirst());
+        assertEquals(5, list.getFirst());
     }
 }

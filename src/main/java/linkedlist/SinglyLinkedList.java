@@ -80,4 +80,23 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
 
         head = head.getNext();
     }
+
+    @Override
+    public void removeLast() {
+        if (head == null) {
+            return;
+        }
+        if (head.getNext() == null) {
+            head = null;
+            return;
+        }
+
+        SinglyNode<Data> previous = head;
+        SinglyNode<Data> current = head.getNext();
+        while (current.getNext() != null) {
+            previous = current;
+            current = current.getNext();
+        }
+        previous.setNext(null);
+    }
 }

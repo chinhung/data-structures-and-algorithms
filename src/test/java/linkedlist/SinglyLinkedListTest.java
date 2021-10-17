@@ -91,8 +91,6 @@ public class SinglyLinkedListTest {
     @Test
     public void testGet_NegativeIdx() {
         LinkedList<Integer> list = new SinglyLinkedList<>();
-        list.insertFirst(5);
-        list.insertFirst(10);
 
         assertThrows(IllegalArgumentException.class, () -> {
             list.get(-1);
@@ -102,11 +100,15 @@ public class SinglyLinkedListTest {
     @Test
     public void testGet_IndexOutOfBounds() {
         LinkedList<Integer> list = new SinglyLinkedList<>();
-        list.insertFirst(5);
-        list.insertFirst(10);
 
         assertThrows(IndexOutOfBoundsException.class, () -> {
-            list.get(2);
+            list.get(0);
+        });
+
+        list.insertFirst(5);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.get(1);
         });
     }
 }

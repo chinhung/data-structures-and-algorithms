@@ -99,4 +99,28 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
         }
         previous.setNext(null);
     }
+
+    @Override
+    public Data get(int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("index must be equal to zero, or larger than zero");
+        }
+        if (head == null) {
+            throw new IndexOutOfBoundsException("this list is empty");
+        }
+
+        SinglyNode<Data> current = head;
+        for (int i = 0; i <= index; i++) {
+            if (i == index) {
+                break;
+            }
+
+            if (current.getNext() == null) {
+                throw new IndexOutOfBoundsException("index is out of bounds, max index is " + (i - 1));
+            }
+
+            current = current.getNext();
+        }
+        return current.getData();
+    }
 }

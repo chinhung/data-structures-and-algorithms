@@ -111,4 +111,40 @@ public class SinglyLinkedListTest {
             list.get(1);
         });
     }
+
+    @Test
+    public void testRemove() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        Integer removed = list.remove(0);
+
+        assertEquals(10, removed);
+        assertEquals(5, list.getFirst());
+    }
+
+    @Test
+    public void testRemove_NegativeIdx() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            list.remove(-1);
+        });
+    }
+
+    @Test
+    public void testRemove_IndexOutOfBounds() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.remove(0);
+        });
+
+        list.insertFirst(5);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.remove(1);
+        });
+    }
 }

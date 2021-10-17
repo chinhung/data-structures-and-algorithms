@@ -151,4 +151,39 @@ public class SinglyLinkedList<Data> implements LinkedList<Data> {
         previous.setNext(current.getNext());
         return current.getData();
     }
+
+    @Override
+    public void insert(int index, Data data) {
+        if (index < 0) {
+            throw new IllegalArgumentException("index must be equal to zero, or larger than zero");
+        }
+        if (head == null && index != 0) {
+            throw new IndexOutOfBoundsException("this list is empty");
+        }
+
+        SinglyNode<Data> previous = null;
+        SinglyNode<Data> current = head;
+        for (int i = 0; i <= index; i++) {
+            if (i == index) {
+                break;
+            }
+
+            if (current.getNext() == null) {
+                throw new IndexOutOfBoundsException("index is out of bounds, max index is " + (i - 1));
+            }
+
+            previous = current;
+            current = current.getNext();
+        }
+
+        SinglyNode<Data> newNode = new SinglyNode(data);
+        if (previous == null) {
+            newNode.setNext(head);
+            head = newNode;
+            return;
+        }
+
+        newNode.setNext(current);
+        previous.setNext(newNode);
+    }
 }

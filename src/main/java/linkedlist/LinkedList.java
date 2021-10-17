@@ -15,4 +15,6 @@ public interface LinkedList<Data> {
     void clear();
 
     void removeFirst();
+
+    void removeLast();
 }

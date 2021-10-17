@@ -13,4 +13,6 @@ public interface LinkedList<Data> {
     int getSize();
 
     void clear();
+
+    void removeFirst();
 }

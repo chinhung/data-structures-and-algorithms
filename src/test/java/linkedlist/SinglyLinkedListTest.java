@@ -50,4 +50,16 @@ public class SinglyLinkedListTest {
         assertNull(list.getFirst());
         assertNull(list.getLast());
     }
+
+    @Test
+    public void testRemoveFirst() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        list.removeFirst();
+
+        assertEquals(1, list.getSize());
+        assertEquals(10, list.getFirst());
+    }
 }

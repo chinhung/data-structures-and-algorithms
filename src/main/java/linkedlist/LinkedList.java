@@ -17,4 +17,6 @@ public interface LinkedList<Data> {
     void removeFirst();
 
     void removeLast();
+
+    Data get(int index);
 }

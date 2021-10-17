@@ -74,4 +74,39 @@ public class SinglyLinkedListTest {
         assertEquals(1, list.getSize());
         assertEquals(5, list.getLast());
     }
+
+    @Test
+    public void testGet() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        Integer atZero = list.get(0);
+        Integer atOne = list.get(1);
+
+        assertEquals(10, atZero);
+        assertEquals(5, atOne);
+    }
+
+    @Test
+    public void testGet_NegativeIdx() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            list.get(-1);
+        });
+    }
+
+    @Test
+    public void testGet_IndexOutOfBounds() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.get(2);
+        });
+    }
 }

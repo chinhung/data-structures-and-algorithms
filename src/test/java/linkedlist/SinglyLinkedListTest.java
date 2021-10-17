@@ -149,4 +149,41 @@ public class SinglyLinkedListTest {
             list.remove(1);
         });
     }
+
+    @Test
+    public void testInsert() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertFirst(5);
+        list.insertFirst(10);
+
+        list.insert(1, 15);
+
+        assertEquals(10, list.get(0));
+        assertEquals(15, list.get(1));
+        assertEquals(5, list.get(2));
+    }
+
+    @Test
+    public void testInsert_NegativeIdx() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            list.insert(-1, 15);
+        });
+    }
+
+    @Test
+    public void testInsert_IndexOutOfBounds() {
+        LinkedList<Integer> list = new SinglyLinkedList<>();
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.insert(1, 15);
+        });
+
+        list.insert(0, 5);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.remove(2);
+        });
+    }
 }

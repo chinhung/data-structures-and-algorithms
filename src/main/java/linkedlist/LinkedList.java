@@ -21,4 +21,6 @@ public interface LinkedList<Data> {
     Data get(int index);
 
     Data remove(int index);
+
+    void insert(int index, Data data);
 }

@@ -10,7 +10,7 @@ public class FactorialTest {
 
     @Test
     public void testFactorial() {
-        Factorial factorial = null;
+        Factorial factorial = new RecursiveFactorial();
 
         assertEquals(BigInteger.ONE, factorial.calculate(0));
         assertEquals(BigInteger.ONE, factorial.calculate(1));

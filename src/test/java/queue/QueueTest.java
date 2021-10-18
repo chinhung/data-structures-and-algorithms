@@ -8,7 +8,7 @@ public class QueueTest {
 
     @Test
     public void testAddAndRemove() {
-        Queue queue = new ArrayBasedQueue(10);
+        Queue<Integer> queue = new ArrayListBasedQueue<>();
 
         queue.add(10);
         assertEquals(1, queue.getSize());
@@ -19,7 +19,7 @@ public class QueueTest {
 
     @Test
     public void testFirstInFirstOut() {
-        Queue queue = new ArrayBasedQueue(10);
+        Queue<Integer> queue = new ArrayListBasedQueue<>();
         Integer firstIn = 1;
         Integer secondIn = 2;
         queue.add(firstIn);

@@ -25,6 +25,7 @@ This repository is developing and will be up-to-date. The following list shows t
   - ArrayFibonacci
   - RecursiveFibonacci
   - CachedRecursiveFibonacci
+- Factorial
 - FizzBuzz
 - Sorting Algorithms
   - Selection Sort

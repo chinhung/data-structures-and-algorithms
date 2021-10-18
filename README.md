@@ -37,7 +37,6 @@ Examples to be added to this repository are the following:
 - Binary Search Tree
 - Reverse String
 - Reverse Integer
-- Factorial
 - ...etc.
 
 Stay tuned!

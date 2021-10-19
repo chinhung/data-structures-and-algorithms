@@ -36,7 +36,6 @@ Examples to be added to this repository are the following:
 
 - Merge Sort
 - Binary Search Tree
-
 - Reverse Integer
 - ...etc.
 

@@ -10,7 +10,8 @@ public class ReverseStringTest {
     public void testReverse() {
         ReverseString reverseString = null;
 
-        assertEquals("olleh", reverseString.reverse("hello"));
+        assertEquals("", reverseString.reverse(""));
+        assertEquals("dlrow olleh", reverseString.reverse("hello world"));
         assertEquals("!gninroM", reverseString.reverse("Morning!"));
     }
 }

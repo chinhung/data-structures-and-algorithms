@@ -1,17 +1,13 @@
 package reverse_string;
 
+import stack.ArrayListBasedStack;
 import stack.Stack;
 
 public class StackBasedReverseString implements ReverseString {
 
-    private Stack<Character> stack;
-
-    public StackBasedReverseString(Stack<Character> stack) {
-        this.stack = stack;
-    }
-
     @Override
     public String reverse(String input) {
+        Stack<Character> stack = new ArrayListBasedStack<>();
         char[] chars = input.toCharArray();
         for (char c : chars) {
             stack.add(c);

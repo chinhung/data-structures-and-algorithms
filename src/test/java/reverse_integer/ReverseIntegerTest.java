@@ -8,17 +8,17 @@ public class ReverseIntegerTest {
 
     @Test
     public void testReverse() {
-        ReverseInteger reverseInteger = null;
+        ReverseInteger reverseInteger = new ReverseIntegerImpl();
 
         assertEquals(-18, reverseInteger.reverse(-81));
-        assertEquals(-10, reverseInteger.reverse(-1));
+        assertEquals(-1, reverseInteger.reverse(-10));
         assertEquals(-1, reverseInteger.reverse(-1));
         assertEquals(0, reverseInteger.reverse(0));
         assertEquals(1, reverseInteger.reverse(1));
-        assertEquals(10, reverseInteger.reverse(1));
+        assertEquals(1, reverseInteger.reverse(10));
         assertEquals(18, reverseInteger.reverse(81));
 
-        assertEquals(100, reverseInteger.reverse(1));
-        assertEquals(1080, reverseInteger.reverse(801));
+        assertEquals(1, reverseInteger.reverse(100));
+        assertEquals(801, reverseInteger.reverse(1080));
     }
 }

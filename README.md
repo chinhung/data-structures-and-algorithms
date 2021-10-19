@@ -21,6 +21,7 @@ This repository is developing and will be up-to-date. The following list shows t
 ### Algorithms
 
 - Reverse String
+- Reverse Integer
 - Palindrome
 - Fibonacci
   - ArrayFibonacci
@@ -36,7 +37,6 @@ Examples to be added to this repository are the following:
 
 - Merge Sort
 - Binary Search Tree
-- Reverse Integer
 - ...etc.
 
 Stay tuned!

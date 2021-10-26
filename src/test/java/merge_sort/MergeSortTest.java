@@ -1,8 +1,6 @@
 package merge_sort;
 
 import org.junit.jupiter.api.Test;
-import selection_sort.SelectionSort;
-import selection_sort.SelectionSortImpl;
 import test_util.TestData;
 
 import java.util.Comparator;

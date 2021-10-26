@@ -32,10 +32,10 @@ This repository is developing and will be up-to-date. The following list shows t
 - Sorting Algorithms
   - Selection Sort
   - Bubble Sort
+  - Merge Sort
 
 Examples to be added to this repository are the following:
 
-- Merge Sort
 - Binary Search Tree
 - ...etc.
 

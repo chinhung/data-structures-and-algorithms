@@ -8,15 +8,11 @@ public class CapitalizeTest {
 
     @Test
     public void testCapitalize() {
-        Capitalize capitalize = new Capitalize() {
-            @Override
-            public String execute(String sentence) {
-                return null;
-            }
-        };
+        Capitalize capitalize = new CapitalizeImpl();
 
         assertEquals("", capitalize.execute(""));
         assertEquals("Hi", capitalize.execute("hi"));
         assertEquals("Hi, There!", capitalize.execute("hi, there!"));
+        assertEquals("This Is A Book", capitalize.execute("this is a book"));
     }
 }

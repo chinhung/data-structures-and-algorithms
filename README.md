@@ -20,6 +20,7 @@ This repository is developing and will be up-to-date. The following list shows t
 
 ### Algorithms
 
+- Capitalize
 - Reverse String
 - Reverse Integer
 - Palindrome
@@ -38,7 +39,6 @@ Examples to be added to this repository are the following:
 
 - Binary Search Tree
 - Anagrams
-- Capitalize
 - Chunk
 - Circular
 - From Last

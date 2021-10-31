@@ -9,9 +9,10 @@ public class AnagramTest {
 
     @Test
     public void testAnagram() {
-        Anagram anagram = null;
+        Anagram anagram = new AnagramImpl();
 
         assertFalse(anagram.isAnagram("", ""));
+        assertFalse(anagram.isAnagram(" ", " "));
         assertFalse(anagram.isAnagram("Hi, there!", "Hello World!"));
         assertTrue(anagram.isAnagram("Madonna Louise Ciccone", "One cool dance musician"));
         assertTrue(anagram.isAnagram("Oh, lame saint", "The Mona Lisa"));

@@ -21,6 +21,7 @@ This repository is developing and will be up-to-date. The following list shows t
 ### Algorithms
 
 - Anagram
+- Frequent Words
 - Binary Search Tree
 - Capitalize
 - Candy Swap

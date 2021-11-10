@@ -2,7 +2,7 @@ package frequent_words;
 
 import java.util.Objects;
 
-class WordCount {
+class WordCount implements Comparable<WordCount> {
 
     private String word;
     private Integer count;
@@ -39,5 +39,13 @@ class WordCount {
     @Override
     public int hashCode() {
         return Objects.hash(word, count);
+    }
+
+    @Override
+    public int compareTo(WordCount o) {
+        if (!count.equals(o.getCount())) {
+            return (-1) * count.compareTo(o.getCount());
+        }
+        return word.compareTo(o.getWord());
     }
 }

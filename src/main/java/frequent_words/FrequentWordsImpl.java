@@ -22,15 +22,7 @@ public class FrequentWordsImpl implements FrequentWords {
             }
         }
 
-        List<WordCount> sorted = wordCountSet.stream().sorted((wordCount1, wordCount2) -> {
-            if (wordCount1.getCount() > wordCount2.getCount()) {
-                return -1;
-            }
-            if (wordCount1.getCount() < wordCount2.getCount()) {
-                return 1;
-            }
-            return wordCount1.getWord().compareTo(wordCount2.getWord());
-        }).collect(Collectors.toList());
+        List<WordCount> sorted = wordCountSet.stream().sorted().collect(Collectors.toList());
 
         return sorted.subList(0, k).stream().map(WordCount::getWord).toArray(String[]::new);
     }

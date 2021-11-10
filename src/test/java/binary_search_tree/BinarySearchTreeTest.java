@@ -60,4 +60,23 @@ public class BinarySearchTreeTest {
 
         assertArrayEquals(new Integer[]{ 10, 5, 20, 3, 6 }, container.toArray());
     }
+
+    @Test
+    public void testTraverseDF() {
+        Comparator<Integer> naturalOrder = Comparator.comparingInt((Integer o) -> o);
+        BinarySearchTree<Integer> bst = new BinarySearchTreeImpl<>(naturalOrder);
+
+        //     10
+        //   5    20
+        //  3 6
+        bst.add(10);
+        bst.add(20);
+        bst.add(5);
+        bst.add(3);
+        bst.add(6);
+        List<Integer> container = new ArrayList<>();
+        bst.traverseDF((data) -> container.add(data));
+
+        assertArrayEquals(new Integer[]{ 10, 5, 3, 6, 20 }, container.toArray());
+    }
 }

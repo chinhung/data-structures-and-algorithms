@@ -73,4 +73,25 @@ public class BinarySearchTreeImpl<Data> implements BinarySearchTree<Data> {
             nextLevel = new ArrayList<>();
         }
     }
+
+    @Override
+    public void traverseDF(Consumer<Data> consumer) {
+        if (root == null) {
+            return;
+        }
+
+        traverseDF(root, consumer);
+    }
+
+    private void traverseDF(Node<Data> node, Consumer<Data> consumer) {
+        consumer.accept(node.getData());
+
+        if (node.getLeft() != null) {
+            traverseDF(node.getLeft(), consumer);
+        }
+
+        if (node.getRight() != null) {
+            traverseDF(node.getRight(), consumer);
+        }
+    }
 }

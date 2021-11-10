@@ -21,6 +21,7 @@ This repository is developing and will be up-to-date. The following list shows t
 ### Algorithms
 
 - Anagram
+- Binary Search Tree
 - Capitalize
 - Reverse String
 - Reverse Integer
@@ -38,7 +39,7 @@ This repository is developing and will be up-to-date. The following list shows t
 
 Examples to be added to this repository are the following:
 
-- Binary Search Tree
+
 - Chunk
 - Circular
 - From Last

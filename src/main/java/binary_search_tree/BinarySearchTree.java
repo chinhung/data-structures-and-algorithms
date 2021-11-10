@@ -10,6 +10,8 @@ public interface BinarySearchTree<Data> {
 
     boolean isValid();
 
+    boolean exists(Data data);
+
     void traverseBF(Consumer<Data> consumer);
 
     void traverseDF(Consumer<Data> consumer);

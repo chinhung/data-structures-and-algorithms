@@ -94,4 +94,20 @@ class Node<Data> {
         }
         return leftValid && rightValid;
     }
+
+    public boolean exists(Data data, Comparator<Data> comparator) {
+        if (this.data.equals(data)) {
+            return true;
+        }
+
+        if (left != null && comparator.compare(data, this.data) < 0) {
+            return left.exists(data, comparator);
+        }
+
+        if (right != null && comparator.compare(data, this.data) > 0) {
+            return right.exists(data, comparator);
+        }
+
+        return false;
+    }
 }

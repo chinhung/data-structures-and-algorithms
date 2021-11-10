@@ -44,6 +44,15 @@ public class BinarySearchTreeImpl<Data> implements BinarySearchTree<Data> {
     }
 
     @Override
+    public boolean exists(Data data) {
+        if (root == null) {
+            return false;
+        }
+
+        return root.exists(data, comparator);
+    }
+
+    @Override
     public void traverseBF(Consumer<Data> consumer) {
         if (root == null) {
             return;

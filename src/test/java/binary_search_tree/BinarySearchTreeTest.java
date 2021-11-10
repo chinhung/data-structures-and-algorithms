@@ -79,4 +79,27 @@ public class BinarySearchTreeTest {
 
         assertArrayEquals(new Integer[]{ 10, 5, 3, 6, 20 }, container.toArray());
     }
+
+    @Test
+    public void testExists() {
+        Comparator<Integer> naturalOrder = Comparator.comparingInt((Integer o) -> o);
+        BinarySearchTree<Integer> bst = new BinarySearchTreeImpl<>(naturalOrder);
+
+        //     10
+        //   5    20
+        //  3 6
+        bst.add(10);
+        bst.add(20);
+        bst.add(5);
+        bst.add(3);
+        bst.add(6);
+
+        assertTrue(bst.exists(10));
+        assertTrue(bst.exists(20));
+        assertTrue(bst.exists(5));
+        assertTrue(bst.exists(3));
+        assertTrue(bst.exists(6));
+        assertFalse(bst.exists(0));
+        assertFalse(bst.exists(100));
+    }
 }

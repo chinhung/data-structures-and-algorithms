@@ -32,6 +32,6 @@ public class FrequentWordsImpl implements FrequentWords {
             return wordCount1.getWord().compareTo(wordCount2.getWord());
         }).collect(Collectors.toList());
 
-        return sorted.subList(0, k).stream().map(WordCount::getWord).collect(Collectors.toList()).toArray(new String[0]);
+        return sorted.subList(0, k).stream().map(WordCount::getWord).toArray(String[]::new);
     }
 }
